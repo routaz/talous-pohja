@@ -9,7 +9,15 @@ Pohja on tehty yhtiölle, joka laskuttaa satunnaisesti toisia yrityksiä
 (esim. esiintymis- ja suorituspalkkioita), pitää rahat yhtiössä ja nostaa
 osinkoa kerran vuodessa. Säännöt ovat skillissä `fi-rules`.
 
-> ⚠ Pohja ei korvaa tilitoimistoa tai veroneuvontaa. `⚠ TARKISTA`-merkityt
+> ## ⚠ Vastuuvapaus
+>
+> Repo on maksutta jaettu esimerkki, **ei oikeudellista, verotuksellista,
+> kirjanpidollista eikä sijoitusneuvontaa**. Sisältö toimitetaan sellaisenaan
+> ilman takuuta, ja tekoäly voi erehtyä. **Käyttö on täysin omalla
+> vastuullasi.** Tekijä ei vastaa repon käytöstä aiheutuvista vahingoista tai
+> menetyksistä. Lue koko lauseke: [`VASTUUVAPAUS.md`](VASTUUVAPAUS.md).
+>
+> Pohja ei korvaa tilitoimistoa tai veroneuvontaa. `⚠ TARKISTA`-merkityt
 > kohdat on tarkistettava lähteestä. Lakiviittaukset on koottu syksyllä 2026.
 
 ## Mitä mukana on
@@ -25,6 +33,7 @@ osinkoa kerran vuodessa. Säännöt ovat skillissä `fi-rules`.
 | `.mcp.json`, `.claude/settings.json` | NoCFO-liitin ja vahvistuspyynnöt peruuttamattomille toimille |
 | `arkisto/` | Yhtiön asiakirjat (tyhjät kansiot) |
 | `docs/` | Arkkitehtuuri, NoCFO-ohje ja käyttöönoton tehtävälista |
+| `VASTUUVAPAUS.md`, `LICENSE` | Vastuuvapauslauseke ja MIT-lisenssi |
 
 ## Käyttöönotto
 
@@ -36,6 +45,8 @@ osinkoa kerran vuodessa. Säännöt ovat skillissä `fi-rules`.
 - Gitin ja Pythonin (3.9+), jos käytät Claude Codea omalla koneella
 
 ### 2. Tee oma repo pohjasta
+
+Lue ensin [`VASTUUVAPAUS.md`](VASTUUVAPAUS.md). Käyttämällä pohjaa hyväksyt sen ehdot.
 
 1. Paina tämän repon GitHub-sivulla **Use this template → Create a new repository**.
 2. Valitse nimi (esim. `yhtio-talous`) ja **Private**. Repoon tallennetaan

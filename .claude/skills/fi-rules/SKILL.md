@@ -19,6 +19,7 @@ kertoo, mitä sääntöjä kirjausten, laskujen ja päätösten on noudatettava.
 | Yhtiökokous, päätökset, osinko, osakaslaina | `viitteet/osakeyhtio.md` |
 | Yhteisövero, kulujen vähennyskelpoisuus, 6B | `viitteet/tuloverotus.md` |
 | Rahan nostaminen yhtiöstä, osingon verotus | `viitteet/osinko-ja-nostot.md` |
+| Yhtiön varojen sijoittaminen (osakkeet, rahastot) | `viitteet/sijoittaminen.md` |
 | ALV, esiintymispalkkiot, laskumerkinnät | `viitteet/arvonlisavero.md` |
 | Vuosikalenteri ja määräajat | `viitteet/maaraajat.md` |
 | Lähteet ja niiden tarkistaminen | `viitteet/lahteet.md` |
