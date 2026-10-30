@@ -1,0 +1,21 @@
+# Paikalliset salaisuudet
+.env
+*.local.yaml
+.claude/settings.local.json
+
+# C#-käännöstuotteet (tuleva MCP-palvelin)
+bin/
+obj/
+
+# Käyttöjärjestelmien roskatiedostot
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+
+# Git-bundlet (siirtotiedostot)
+*.bundle
+
+# Pythonin työtiedostot
+.venv/
+__pycache__/

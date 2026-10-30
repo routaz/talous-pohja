@@ -1,0 +1,99 @@
+# Yhtiön perustiedot. Täytä kaikki kohdat, joissa lukee TÄYTÄ.
+# Tiedot löytyvät kaupparekisteriotteesta (virre.prh.fi) ja YTJ:stä (ytj.fi).
+# Älä tallenna tänne henkilötunnuksia, verkkopankkitunnuksia tai salasanoja.
+# Laskutus- ja pankkitiedot (IBAN, maksuehto, laskun ulkoasu) ovat NoCFO:n yritysasetuksissa.
+
+nimi: TÄYTÄ Oy
+y_tunnus: "TÄYTÄ"             # esim. "1234567-8"
+kotipaikka: TÄYTÄ
+osoite:
+  katuosoite: "TÄYTÄ"
+  postinumero: "TÄYTÄ"
+  toimipaikka: "TÄYTÄ"
+  maa: FI
+toimiala: "TÄYTÄ"             # kaupparekisteriotteesta
+rekisteroity: null            # VVVV-MM-PP
+lahde: "TÄYTÄ"                # esim. "Kaupparekisteriote PP.KK.VVVV"
+
+tilikausi:
+  alku: "01-01"               # KK-PP, tarkista kaupparekisteriotteesta
+  loppu: "12-31"
+  rekisteroidyt_tilinpaatokset: []   # VVVV-MM-PP..VVVV-MM-PP, viimeisin ensin
+
+pankkitili:
+  pankki: TÄYTÄ
+  iban: null                    # tarkista verkkopankista; sama kuin NoCFO:n asetuksissa
+  nocfo_pankkiyhteys: false     # true, kun NoCFO:n pankkiyhteys on kytketty
+
+yhtion_asiakirjat:              # tallenna kansioon arkisto/yhtio/
+  osakeluettelo: null           # OYL 3:15
+  osakasluettelo: null          # OYL 3:16
+  yhtiojarjestys: null          # PDF PRH:lta
+  puuttuvat: []
+
+osakepaaoma_eur: 0              # TÄYTÄ (2 500 € tai 0 €, jos perustettu 1.7.2019 jälkeen)
+osakkeiden_lukumaara: 0         # TÄYTÄ
+osakkaat:
+  - nimi: TÄYTÄ
+    osakkeet: 0
+    osakenumerot: "TÄYTÄ"
+
+hallitus:
+  varsinainen_jasen: TÄYTÄ
+  varajasen: TÄYTÄ              # pakollinen, jos jäseniä alle kolme (OYL 6:8)
+toimitusjohtaja: null
+edustaminen: "TÄYTÄ"            # esim. "Hallituksen jäsen yksin"
+
+tilintarkastaja: null           # TilintL 2:2, tarkista rajat vuosittain
+edunsaajailmoitus: TÄYTÄ        # tehty / ei tehty
+
+arvonlisavero:
+  rekisterissa: false           # true, kun YTJ näyttää ALV-rekisteröinnin
+  rekisteroity_alkaen: null     # VVVV-MM-PP
+  peruste: "TÄYTÄ"              # esim. "Hakeutuminen verovelvolliseksi esiintymispalkkioista (AVL 45 §)" tai "Liikevaihto yli 20 000 € (AVL 3 §)"
+  kausi: kuukausi               # kuukausi / neljännesvuosi / vuosi; NoCFO:n asetus pidettävä samana
+  muistutus: "Ajastettu tehtävä ALV-muistutus kuun 3. päivänä (skill alv-muistutus)"
+  hinnoittelu: "Hinnat aina muodossa veroton summa + alv"
+  # Laskurivien ALV-luokat ja niitä vastaavat NoCFO:n arvot (constants_retrieve:
+  # vat_rates ja vat_codes). invoice-issuer valitsee rivin luokan tästä.
+  # Luokka, jossa vaatii_rekisterin: true, edellyttää rekisterissa: true.
+  # Poista luokat, joita yhtiö ei käytä.
+  luokat:
+    esiintymispalkkio:          # esitys kulttuuritapahtumassa, suomalainen ostaja
+      nocfo_vat_rate: "13.5"
+      nocfo_vat_code: 1         # Domestic taxable sales
+      vaatii_rekisterin: true
+    yleinen:                    # muu palvelu: studiotyö, tuotanto, koulutus ...
+      nocfo_vat_rate: "25.5"
+      nocfo_vat_code: 1
+      vaatii_rekisterin: true
+    kaannetty:                  # palvelu toisen EU-maan yritykselle  ⚠ TARKISTA myyntimaa
+      nocfo_vat_rate: "0"
+      nocfo_vat_code: 6         # Intra-Community sale of services
+      vaatii_rekisterin: true
+      vaatii_ostajan_alv_tunnuksen: true
+      laskuteksti: "VAT reverse charge – VAT to be accounted for by the recipient"
+    veroton_avl45:              # esiintymispalkkio ennen ALV-rekisteröintiä
+      nocfo_vat_rate: "0"
+      nocfo_vat_code: 3         # Tax exempt
+      laskuteksti: "Veroton esiintymispalkkio (AVL 45 §)"
+    veroton_avl3:               # muu myynti ennen ALV-rekisteröintiä
+      nocfo_vat_rate: "0"
+      nocfo_vat_code: 3
+      laskuteksti: "Myyjä ei ole arvonlisäverovelvollinen (AVL 3 §)"
+
+ennakkoperintarekisteri: false  # true, kun YTJ näyttää rekisteröinnin
+# Ennen ennakkoperintärekisteröintiä maksaja voi joutua toimittamaan palkkiosta ennakonpidätyksen.
+
+palkanmaksu: false              # ei palkkaa; varat nostetaan osinkona
+osinkostrategia: >
+  Varat pidetään yhtiön tilillä. Osinko jaetaan kerran vuodessa vahvistetun
+  tilinpäätöksen perusteella, ja sen määrä mitoitetaan osakkeen matemaattisen
+  arvon (8 %) mukaan.
+
+kirjanpito:
+  ohjelma: NoCFO
+  nocfo_business: "TÄYTÄ"       # NoCFO:n yrityksen slug, yleensä Y-tunnus (common_current_business_retrieve)
+  mcp: https://mcp.nocfo.io     # liitin claude.ai:ssa ja .mcp.json Claude Codessa
+  varmuuskopio: arkisto/nocfo/  # nocfo-backup-skill, kuukausittain
+  github_repo: "TÄYTÄ"          # omistaja/repo, esim. "kayttaja/yhtio-talous"; ajastettu varmuuskopio käyttää tätä

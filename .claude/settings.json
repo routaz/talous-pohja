@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "ask": [
+      "mcp__nocfo__invoicing_sales_invoice_send",
+      "mcp__nocfo__invoicing_sales_invoice_action",
+      "mcp__nocfo__invoicing_sales_invoice_delete",
+      "mcp__nocfo__bookkeeping_document_delete",
+      "mcp__nocfo__bookkeeping_account_delete",
+      "mcp__nocfo__reporting_accounting_period_update",
+      "mcp__nocfo__reporting_accounting_period_delete",
+      "mcp__NoCFO__invoicing_sales_invoice_send",
+      "mcp__NoCFO__invoicing_sales_invoice_action",
+      "mcp__NoCFO__invoicing_sales_invoice_delete",
+      "mcp__NoCFO__bookkeeping_document_delete",
+      "mcp__NoCFO__bookkeeping_account_delete",
+      "mcp__NoCFO__reporting_accounting_period_update",
+      "mcp__NoCFO__reporting_accounting_period_delete"
+    ]
+  },
+  "enabledMcpjsonServers": ["nocfo"]
+}

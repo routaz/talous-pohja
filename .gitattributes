@@ -1,0 +1,16 @@
+# Sama rivinvaihto (LF) Macilla ja Windowsilla
+* text=auto eol=lf
+
+# Windowsin skriptit tarvitsevat CRLF:n
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Arkiston binäärit: ei rivinvaihtomuunnoksia eikä diffejä
+*.pdf  binary
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.heic binary
+*.xlsx binary
+*.zip  binary
