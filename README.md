@@ -2,7 +2,7 @@
 
 Pohja pienen suomalaisen osakeyhtiön taloushallintoon. Claude hoitaa
 laskutuksen, kirjanpidon varmuuskopiot, ALV-muistutukset ja lakisääteiset
-määräajat NoCFO-kirjanpito-ohjelman kautta. Ihminen hyväksyy laskut, tekee
+määräajat [NoCFO](https://www.nocfo.io)-kirjanpito-ohjelman kautta. Ihminen hyväksyy laskut, tekee
 viranomaisilmoitukset ja maksaa.
 
 Pohja on tehty yhtiölle, joka laskuttaa satunnaisesti toisia yrityksiä
@@ -41,7 +41,7 @@ osinkoa kerran vuodessa. Säännöt ovat skillissä `fi-rules`.
 
 - GitHub-tilin
 - Claude-tilauksen (Pro tai Max), jossa on Claude Code
-- NoCFO-tilin, jossa yhtiö on perustettu (nocfo.io)
+- NoCFO-tilin, jossa yhtiö on perustettu ([nocfo.io](https://www.nocfo.io))
 - Gitin ja Pythonin (3.9+), jos käytät Claude Codea omalla koneella
 
 ### 2. Tee oma repo pohjasta
